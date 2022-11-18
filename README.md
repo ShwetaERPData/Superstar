@@ -1,0 +1,7 @@
+## Superstar
+
+Superstar
+
+#### License
+
+MIT
