@@ -1,0 +1,11 @@
+<!-- this is for list -->
+<div class="py-8 row">
+    <div class="col-sm-2"> 
+        <img src="{{doc.image}}" alt="{{ doc.title or doc.name }}">
+    </div>
+    <div class="col">
+        <a class="font-size-lg" href="/vehicles/{{ doc.name }}">{{ doc.title or doc.name }}</a>
+        <p class="text-muted">{{doc.make}}</p>
+    </div>
+</div>
+

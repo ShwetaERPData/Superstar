@@ -1,0 +1,117 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Ride-{#####}",
+ "creation": "2022-11-29 15:17:52.078792",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "ride",
+  "customer",
+  "vehicle",
+  "driver",
+  "pickup_location",
+  "pickup_at",
+  "amended_from",
+  "ride_cost_breakup",
+  "total_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "ride",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Ride",
+   "options": "Ride Order",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "ride.customer",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "User",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "ride.vehicle",
+   "fieldname": "vehicle",
+   "fieldtype": "Link",
+   "label": "Vehicle",
+   "options": "Vehicle_Super",
+   "read_only": 1
+  },
+  {
+   "fieldname": "driver",
+   "fieldtype": "Link",
+   "label": "Driver",
+   "options": "Driver_Super"
+  },
+  {
+   "fetch_from": "ride.pickup_address",
+   "fieldname": "pickup_location",
+   "fieldtype": "Small Text",
+   "label": "Pickup Location",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "ride.pickup_at",
+   "fieldname": "pickup_at",
+   "fieldtype": "Datetime",
+   "label": "Pickup At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Ride",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "ride_cost_breakup",
+   "fieldtype": "Table",
+   "label": "Ride Cost Breakup",
+   "options": "Ride Cost Breakup"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-11-29 17:50:03.992835",
+ "modified_by": "Administrator",
+ "module": "Superstar",
+ "name": "Ride",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
