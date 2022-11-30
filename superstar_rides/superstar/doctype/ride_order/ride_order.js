@@ -12,7 +12,7 @@ frappe.ui.form.on('Ride Order', {
 						{
 							fieldtype : "Link",
 							fieldname : "Driver",
-							label :"Drivers",
+							label :"Drivers Name",
 							options:"Driver_Super",
 						}
 					],
